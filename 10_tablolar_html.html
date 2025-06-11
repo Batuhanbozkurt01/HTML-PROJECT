@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px, solid, rgb(155, 220, 255);
+            /* border-collapse: collapse; */
+            border-radius: 10px;
+        }
+        th, td{
+            color: blue;
+            font-size: 50px;
+        }
+        th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Temel HTML Tablosu</h2>
+    <caption>Coğrafi Bilgi</caption>
+    <table style="width: 100%">
+        <!-- <colgroup>
+            <col span="1" style="background-color:blue">
+            <col style="background-color:yellow">
+        </colgroup> -->
+        <tr>
+            <th style="width: 20%">Bölge</th>
+            <th>İl</th>
+            <th>İlçe</th>
+        </tr>
+        <tr style="height: 100px">
+            <td>Marmara</td>
+            <td>İstanbul</td>
+            <td>Fatih</td>
+        </tr>
+        <tr>
+            <td>Ege</td>
+            <td>İzmir</td>
+            <td>Konak</td>
+        </tr>
+    </table>
+</body>
+</html>
+<!--
+Tabloya şekil vermek için basit seviyede CSS kullanılmıştır.
+HTML'de bir tablo, satırlar ve sütunlar içindeki tablo hücrelerinden oluşur.
+<table> etiketi ile tablo yapısı tanımlanır.
+td tablo verilerini ifade eder.
+tr tablo satırını ifade eder.
+th tablo başlığı anlamına gelir.
+Mevcut olan birkaç tane daha etiket vardır:
+<caption> etiketi Bir tablo başlığı tanımlar.
+<colgroup> etiketi Biçimlendirme için bir tabloda bir veya daha fazla sütundan oluşan bir grubu belirtir.
+<col> etiketi <colgroup> öğesi içindeki her sütun için sütun özelliklerini belirtir.
+<thead> Başlık içeriğini bir tabloda gruplandırır.
+<tbody> Gövde içeriğini bir tabloda gruplandırır.
+<tfoot> Altbilgi içeriğini bir tabloda gruplandırır.
+-->
+<!--
+CSS kullanmak:
+border ifadesi ile kenarlıkların pixelini, border-style yapısını, border-color yapısını belirttim.
+border-collapse: collapse; ifadesi tablolarda oluşan kenarlıkları düzenlemek içindir.
+border-radius: 10px; tablodaki köşeleri yuvaarlatmak için kullanılır.
+-->
+<!--
+Tablo Boyutları Ayarlaması
+Bir tablonun genişliği table etiketinin içine yazılacak olan style niteliği width ile eklenebilir.
+Belirli bir sütunun boyutunu ayarlamak için style bir <th>veya <td>öğesine özniteliği eklenebilir.
+Belirli bir satırın yüksekliğini ayarlamak için, style tablo satırı öğesine niteliği eklenebilir.
+
+-->
+<!--
+Diğer Notlar:
+Not-1-> İki veya daha fazla sütuna yayılan bir başlığınız olabilir. Bunu yapmak için <th> etiketinin içinde colspan kullanın.
+Not-2-> Tüm tabloya başlık görevi görecek bir başlık ekleyebilirsiniz. Bir tabloya başlık eklemek için şu <caption>etiketi kullanın. 
+Not-3->Hücre dolgusu, hücre kenarları ile hücre içeriği arasındaki boşluktur.
+Varsayılan olarak dolgu 0'a ayarlanır.
+Tablo hücrelerine dolgu eklemek için CSS padding özelliğini kullanın.    
+padding farklı taraflara farklı dolgu eklenmek istenilirse, padding-top, padding-left, padding-right, padding-bottom tercih edilebilir.
+Not-4-> Hücre aralığı, her hücre arasındaki boşluktur.
+Varsayılan olarak boşluk 2 piksele ayarlanmıştır.
+Tablo hücreleri arasındaki boşluğu değiştirmek için öğedeki CSS border-spacing özelliğini kullanın.
+
+
+-->
