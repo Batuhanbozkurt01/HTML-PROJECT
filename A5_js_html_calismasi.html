@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(235, 90, 90, 0.3);
+        transition: 0.9s;
+    }
+
+    button:hover {
+        background-color: orange; /* üzerine gelince renk değişimi */
+    }
+</style>
+</head>
+<body>
+<script>
+function vakit(ab) {
+    var pic;
+    if (ab == 0) {
+        pic = "resimler/gunduz_resmi.png";
+    } else {
+        pic = "resimler/geceresmi.png";
+    }
+    document.getElementById("resiim").src = pic;
+}
+</script>
+
+<img id="resiim" src="resimler/manzara_resmi_gun_batimi.jpg" width="600px" height="600px" alt="">
+
+<p>
+    <button type="button" onclick="vakit(1)">GECE MODU</button>
+    <button type="button" onclick="vakit(0)">GÜNDÜZ MODU</button>
+</p>
+</body>
+</html>
+<!-- 
+Bu sayfa temel düzeyde HTML, CSS ve JavaScript içermektedir.
+
+JavaScript içinde bir fonksiyon (function) tanımladım ve bunu if–else koşullarıyla yönettim. 
+Bu fonksiyon, görselin (img etiketinin) kaynağını değiştirerek kullanıcıya gece ve gündüz modları sunar.
+
+HTML kısmında img ve p etiketlerini kullandım. 
+p etiketi içerisinde iki buton oluşturdum: biri gündüz (GÜNDÜZ MODU), diğeri gece (GECE MODU) modunu temsil ediyor.
+
+CSS tarafında ise butonlara stil verdim. Renk, köşe yuvarlama, gölge ve hover (üzerine gelme) efektleri gibi temel ve ekstra stiller ekledim.
+-->
