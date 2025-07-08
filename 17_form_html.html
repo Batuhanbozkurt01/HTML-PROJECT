@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HTML'de Form Yapısı</h2>
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    0
+    <input type="range" id="a" name="a" value="50">
+    100 +
+    <input type="number" id="b" name="b" value="50">
+    =
+    <output name="x" for="a b"></output>
+    <br><br>
+        <fieldset>
+        <legend>AD-SOYAD</legend>
+        <label for="fname">ADINIZ: </label><br>
+        <input type="text" id="fname" name="fname" value="AD"><br>
+        <label for="sname">SOYADINIZ: </label><br>
+        <input type="text" id="sname" name="sname" value="SOYAD">
+        </fieldset><br>
+        <h4>Cinsiyet: </h4>
+        <input type="radio" id="male" name="cinsiyet" value="ERKEK">
+        <label for="erkek">ERKEK</label>
+        <input type="radio" id="female" name="cinsiyet" value="KADIN">
+        <label for="kadın">KADIN</label>
+        <h5>İNGİLİZCE BİLGİ SEVİYENİZ: </h5>
+        <input type="checkbox" id="baslangic" name="baslangic" value="baslangic">
+        <label for="baslangic">BAŞLANGIÇ DÜZEYİ</label>
+        <input type="checkbox" id="orta" name="orta" value="orta">
+        <label for="orta">ORTA DÜZEY</label>
+        <input type="checkbox" id="anadil" name="anadil" value="anadil">
+        <label for="anadil">ANADİL DÜZEYİ</label><br>
+        <label for="cities">Bir şehir seçin: </label>
+        <select name="cities" id="cities" size="2" multiple>
+            <option value="erzurum" selected>Erzurum</option>
+            <option value="adana">Adana</option>
+            <option value="çankırı">Çankırı</option>
+            <option value="ısparta">Isparta</option>
+        </select><br>
+        <textarea name="metin" rows="10" cols="10">
+            Buraya istediğiniz şeyi yazabilirsiniz.
+        </textarea><br>
+        <button type="button" onclick="alert('HELLO WORLD!')">BURAYA TIKLA!</button><br>
+        <input list="browsers" name="browser">
+    <datalist id="renkler">
+        <option value="MAVİ">
+        <option value="KIRMIZI">
+        <option value="TURUNCU">
+        <option value="SİYAH">
+        <option value="MOR">
+    </datalist>
+
+        <input type="submit" value="Gönder">
+    </form>
+</body>
+</html>
+
+<!--
+form etiketi ile form yapısı oluşturulur.
+<input>elemanı en çok kullanılan form elemanıdır.
+Bir <input> elemanı, type niteliğine bağlı olarak birçok şekilde görüntülenebilir:
+    <input type="text"> Tek satırlık bir metin giriş alanı görüntüler
+    <input type="radio"> Bir radyo düğmesi görüntüler (birçok seçenekten birini seçmek için)
+    <input type="checkbox"> Bir onay kutusu görüntüler (birçok seçenekten sıfır veya daha fazlasını seçmek için)
+    <input type="submit"> Bir gönder düğmesi görüntüler (formu göndermek için)
+    <input type="button"> Tıklanabilir bir düğme görüntüler
+<select>bir açılır liste tanımlar
+    <option>seçilebilecek bir seçeneği tanımlar.
+    selected Önceden seçilmiş bir seçeneği tanımlamak için
+    size Görünür değerlerin sayısını belirtmek için
+    multiple Kullanıcının birden fazla değer seçmesine izin vermek için 
+textarea>çok satırlı bir giriş alanı (bir metin alanı) tanımlar
+    Bu rows özellği, bir metin alanındaki görünür satır sayısını belirtir.
+    Bu cols özelliği, bir metin alanının görünür genişliğini belirtir.
+<button> tıklanabilir bir düğmeyi tanımlar
+<fieldset> bir formdaki ilgili verileri gruplamak için kullanılır.
+    <legend> <fieldset> için bir başlık tanımlar
+<datalist>, bir <input> öğesi için önceden tanımlanmış seçeneklerin bir listesini belirtir
+    Kullanıcılar veri girdikçe önceden tanımlanmış seçeneklerin açılır listesini görecekler.
+<output>, bir hesaplamanın (bir betik tarafından yapılan hesaplama gibi) sonucunu temsil eder.
+HTML'de kullanabileceğiniz farklı girdi türleri şunlardır:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+value niteliği, bir giriş alanı için bir başlangıç ​​değeri belirtir
+readonly niteliği, bir giriş alanının salt okunur olduğunu belirtir.
+    Salt okunur bir giriş alanı değiştirilemez (ancak kullanıcı sekme tuşuyla üzerine gelebilir, onu vurgulayabilir ve içindeki metni kopyalayabilir).
+    Salt okunur giriş alanının değeri formu gönderirken gönderilecek!
+disabled niteliği bir giriş alanının devre dışı bırakılması gerektiğini belirtir.
+    Devre dışı bırakılan giriş alanı kullanılamaz ve tıklanamaz hale gelir.
+    Devre dışı bırakılmış bir giriş alanının değeri form gönderilirken gönderilmeyecektir!
+size niteliği, bir giriş alanının görünür genişliğini karakter cinsinden belirtir.
+    Varsayılan değer size20'dir.
+    size şu giriş türleriyle çalışır: text, search, tel, url, email, and password.
+maxlength niteliği, bir giriş alanında izin verilen maksimum karakter sayısını belirtir.
+min ve max nitelikler, bir giriş alanı için minimum ve maksimum değerleri belirtir.
+    min ve max öznitelikleri şu giriş türleriyle çalışır: number, range, date, datetime-local, month, time and week.
+pattern niteliği, form gönderildiğinde giriş alanının değerinin kontrol edileceği düzenli bir ifadeyi belirtir.
+    pattern özelliği şu giriş türleriyle çalışır: text, date, search, url, tel, email, and password.
+placeholder niteliği, bir giriş alanının beklenen değerini açıklayan kısa bir ipucu belirtir (bir örnek değer veya beklenen formatın kısa bir açıklaması).
+    Kullanıcı bir değer girmeden önce giriş alanında kısa ipucu görüntülenir.
+    placeholder özelliği şu giriş tipleriyle çalışır: text, search, url, number, tel, email, and password.
+required niteliği, formun gönderilmesinden önce bir giriş alanının doldurulması gerektiğini belirtir.
+    required özelliği şu giriş türleriyle çalışır:  text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
+step niteliği, bir giriş alanı için yasal sayı aralıklarını belirtir.
+    step özelliği şu giriş türleriyle çalışır: number, range, date, datetime-local, month, time and week.
+autofocus niteliği, bir giriş alanının sayfa yüklendiğinde otomatik olarak odaklanması gerektiğini belirtir.
+height ve width nitelikler bir öğenin yüksekliğini ve genişliğini belirtir 
+list niteliği, bir <input> öğesi için önceden tanımlanmış seçenekleri içeren bir <datalist> öğesini ifade eder.
+autocomplete niteliği, bir formun veya giriş alanının otomatik tamamlama özelliğinin açık mı yoksa kapalı mı olacağını belirtir.
+    Otomatik tamamlama, tarayıcının değeri tahmin etmesini sağlar. Bir kullanıcı bir alana yazmaya başladığında, tarayıcı daha önce girilen değerlere göre alanı doldurmak için seçenekler görüntülemelidir.
+    autocomplete özelliği şu türlerle çalışır : text, search, url, tel, email, password, datepickers, range, and color.
+formaction niteliği, form gönderildiğinde girdiyi işleyecek dosyanın URL'sini belirtir.
+    Bu öznitelik, actionöğenin özniteliğini geçersiz kılar
+    formaction özelliği şu giriş türleriyle çalışır: submit and image.
+formenctype niteliği, form verilerinin gönderildiğinde nasıl kodlanacağını belirtir (yalnızca method="post" içeren formlar için).
+    Bu öznitelik, öğenin enctype özniteliğini geçersiz kılar
+    formenctype özelliği şu giriş türleriyle çalışır: submit and image
+formmethod niteliği, form verilerini eylem URL'sine göndermek için HTTP yöntemini tanımlar.
+    Bu öznitelik, öğenin yöntem özniteliğini geçersiz kılar.
+    formmethod özelliği şu giriş türleriyle çalışır: submit ve image.
+    Form verileri URL değişkenleri (method="get") veya HTTP post işlemi (method="post") olarak gönderilebilir.
+
+        "get" metoduna dair notlar:
+        Bu yöntem, form verilerini URL'ye ad/değer çiftleri halinde ekler
+        Bu yöntem, kullanıcının sonucu yer imlerine eklemek istediği form gönderimleri için yararlıdır
+        Bir URL'ye yerleştirebileceğiniz veri miktarının bir sınırı vardır (tarayıcılar arasında değişir), bu nedenle tüm form verilerinin doğru şekilde aktarılacağından emin olamazsınız
+        Hassas bilgileri iletmek için asla "get" yöntemini kullanmayın! (şifre veya diğer hassas bilgiler tarayıcının adres çubuğunda görünür olacaktır)
+        
+        "Post" yöntemine dair notlar:
+        Bu yöntem form verilerini bir HTTP sonrası işlem olarak gönderir
+        "Post" yöntemiyle gönderilen formlar yer imlerine eklenemez
+        "Post" yöntemi "get"ten daha sağlam ve güvenlidir ve "post"un boyut sınırlaması yoktur
+
+formtarget niteliği, form gönderildikten sonra alınan yanıtın nerede görüntüleneceğini belirten bir ad veya anahtar sözcük belirtir.
+    Bu öznitelik, öğenin hedef özniteliğini geçersiz kılar
+    formtarget özelliği şu giriş türleriyle çalışır: submit ve image.
+formnovalidate niteliği, bir <input> öğesinin gönderildiğinde doğrulanmaması gerektiğini belirtir.
+    Bu öznitelik, öğenin novalidate özniteliğini geçersiz kılar
+    formnovalidate özniteliği şu girdi türleriyle çalışır: submit.
+Mevcut olduğunda, novalidate, form verilerinin tümünün gönderildiğinde doğrulanmaması gerektiğini belirtir. 
+-->
